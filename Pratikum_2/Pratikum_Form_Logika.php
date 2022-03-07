@@ -8,7 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>PHP Form Get</title>
+    <title>PHP Form Logika</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
             </header>
 
 
-            <form class="text-center" method="GET" action="aksi_get_nilai.php">
+            <form class="text-center" method="POST" action="aksi_logika_nilai.php">
 
                 <div class="d-flex justify-content-center">
                     <div class="col-md-2">
@@ -60,7 +60,7 @@
                         <label class="form-label">Nilai UTS</label>
                     </div>
                     <div class="col-md-6">
-                        <input type="number" required class="form-control w-50" name="nilaiuts" placeholder="Nilai UTS">
+                        <input type="number" class="form-control w-50" required name="nilaiuts" placeholder="Nilai UTS">
                     </div>
                 </div>
 
@@ -69,16 +69,16 @@
                         <label for="nilaiuas" class="form-label">Nilai UAS</label>
                     </div>
                     <div class="col-md-6">
-                        <input type="number" required class="form-control w-50" name="nilaiuas" placeholder="Nilai UAS">
+                        <input type="number" class="form-control w-50" required name="nilaiuas" placeholder="Nilai UAS">
                     </div>
                 </div>
 
                 <div class="d-flex justify-content-center mt-3">
                     <div class="col-md-2">
-                        <label class="form-label">Nama Lengkap</label>
+                        <label class="form-label">Tugas</label>
                     </div>
                     <div class="col-md-6">
-                        <input type="number" required class="form-control w-50" name="nilaitugas" placeholder="Nilai Tugas">
+                        <input type="number" class="form-control w-50" required name="nilaitugas" placeholder="Nilai Tugas">
                     </div>
                 </div>
 

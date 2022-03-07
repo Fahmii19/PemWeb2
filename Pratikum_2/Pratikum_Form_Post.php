@@ -8,97 +8,128 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>PHP Form Processing</title>
+    <title>Belanja Online</title>
 </head>
 
 <body>
 
-    <nav class="py-2 bg-light border-bottom">
-        <div class="container d-flex flex-wrap">
-            <ul class="nav me-auto">
-                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 fw-bold">Sistem Penilaian</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container mt-3">
-
-        <div class="container py-4">
-            <header class="pb-3 mb-4 border-bottom">
-                <span class="fs-4">Form Penilaian Siswa</span>
-                </a>
-            </header>
 
 
-            <form class="text-center" method="POST" action="aksi_post_nilai.php">
+    <div class="py-3">
 
-                <div class="d-flex justify-content-center">
-                    <div class="col-md-2">
-                        <label class="form-label">Nama Lengkap</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" required name="namalengkap" placeholder="Masukan Nama Lengkap">
-                    </div>
-                </div>
+        <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
 
-                <div class="d-flex justify-content-center mt-3">
-                    <div class="col-md-2">
-                        <label class="form-label">Nama Lengkap</label>
-                    </div>
-                    <div class="col-md-6">
-                        <select class="form-select" required name="matkul">
-                            <option selected>- Pilih Matkul - </option>
-                            <option value="DDP">Dasar-Dasar Pemprograman</option>
-                            <option value="BDI">Basis Data I</option>
-                            <option value="WEB1">Pemprograman Web</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center mt-3">
-                    <div class="col-md-2">
-                        <label class="form-label">Nilai UTS</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="number" class="form-control w-50" required name="nilaiuts" placeholder="Nilai UTS">
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center mt-3">
-                    <div class="col-md-2">
-                        <label for="nilaiuas" class="form-label">Nilai UAS</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="number" class="form-control w-50" required name="nilaiuas" placeholder="Nilai UAS">
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center mt-3">
-                    <div class="col-md-2">
-                        <label class="form-label">Tugas</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="number" class="form-control w-50" required name="nilaitugas" placeholder="Nilai Tugas">
-                    </div>
-                </div>
+            <div class="container-fluid">
 
                 <div class="row">
-                    <div class="p-3 w-75">
-                        <input type="submit" class="btn btn-primary" value="Simpan" name="proses_submit">
+                    <div class="col-md-9">
+                        <header class="pb-3 mb-4 border-bottom">
+                            <span class="fs-4">Form Belanja Online</span>
+                            </a>
+                        </header>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="form-label fw-bold">Customer</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control w-50" required name="customer" placeholder="Masukan Nama Customer">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-2">
+                                <label class="form-label fw-bold">Pilih Produk</label>
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" required type="radio" name="produk" value="TV" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        TV
+                                    </label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" required type="radio" name="produk" value="KULKAS" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        KULKAS
+                                    </label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" required type="radio" name="produk" value="MESIN CUCI" id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        MESIN CUCI
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-2">
+                                <label class="form-label fw-bold">Jumlah</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="number" class="form-control w-25" required name="jumlah" placeholder="Jumlah">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+
+                            <div class="col-md-8">
+                                <div class="w-25 text-end">
+                                    <input type="submit" class="btn btn-success" value="Kirim" name="proses">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header text-white bg-primary">
+                                Daftar Harga
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">TV : Rp. 4.200.000</li>
+                                <li class="list-group-item">Kulkas : Rp. 3.100.000</li>
+                                <li class="list-group-item">Mesin Cuci : Rp. 3.800.000</li>
+                            </ul>
+                            <div class="card-footer text-white bg-primary">
+                                Harga Dapat Berubah Setiap Saat
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-            </form>
 
-        </div>
+
+            </div>
+
+            <div class="container-fluid">
+                <hr />
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php include 'form_belanja.php' ?>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </form>
+
 
 
     </div>
 
 
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-light fix-bottom fixed-bottom">
-        <p class="col-md-4 mb-0 px-5 text-muted">Create by @Fahmi 2021</p>
-    </footer>
+
 
 
 
