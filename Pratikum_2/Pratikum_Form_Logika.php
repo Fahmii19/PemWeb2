@@ -43,7 +43,7 @@
 
                 <div class="d-flex justify-content-center mt-3">
                     <div class="col-md-2">
-                        <label class="form-label">Nama Lengkap</label>
+                        <label class="form-label">Mata Kuliah</label>
                     </div>
                     <div class="col-md-6">
                         <select class="form-select" required name="matkul">
