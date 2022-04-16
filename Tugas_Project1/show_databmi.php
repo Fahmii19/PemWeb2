@@ -11,7 +11,7 @@ $no = 1;
 $huruf = "RS-FAHMI-";
 $kodeRS = $huruf . sprintf("%03s", $no);
 $no++;
-// var_dump($kodeBarang);
+// var_dump($kodeRS);
 
 $tanggal = $_POST['tanggal'] ?? '';
 $nama = $_POST['nama'] ?? '';
