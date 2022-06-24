@@ -35,19 +35,41 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="form-group">
-                    <label for="nim">Nama</label>
-                    <input type="text" class="form-control" id="nim" placeholder="Nama">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Kode</th>
+                                    <th>Nama</th>
+                                    <th>SKS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $nomor = 1;
+                                foreach ($all_mk as $mk) {
+                                ?>
+                                    <tr>
+                                        <td><?= $nomor ?></td>
+                                        <td><?= $mk->kode ?></td>
+                                        <td><?= $mk->nama ?></td>
+                                        <td><?= $mk->sks ?></td>
+                                    </tr>
+                                <?php
+                                    $nomor++;
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="nim">SKS</label>
-                    <input type="text" class="form-control" id="nim" placeholder="SKS">
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    Try To Be Better
                 </div>
-                <div class="form-group">
-                    <label for="nim">kODE</label>
-                    <input type="text" class="form-control" id="nim" placeholder="kODE">
-                </div>
-
+                <!-- /.card-footer-->
             </div>
             <!-- /.card -->
 

@@ -51,6 +51,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $route['default_controller'] = 'dashboard';
 $route['mahasiswa'] = 'mahasiswa';
+$route['form_mahasiswa'] = 'mahasiswa/create_mahasiswa';
+$route['data_mahasiswa'] = 'mahasiswa/view_mahasiswa';
+
 $route['dosen'] = 'dosen';
 $route['matakuliah'] = 'matakuliah';
 

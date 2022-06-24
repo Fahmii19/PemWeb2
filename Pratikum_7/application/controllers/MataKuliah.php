@@ -24,12 +24,12 @@ class MataKuliah extends CI_Controller
         $this->mk3->nama = 'Bahasa Inggris';
         $this->mk3->sks = '2';
 
-        $list_mk = [$this->mk1, $this->mk2, $this->mk3];
-        $data['list_mk'] = $list_mk;
+        $all_mk = [$this->mk1, $this->mk2, $this->mk3];
+        $data['all_mk'] = $all_mk;
 
         $this->load->view('partial/header');
         $this->load->view('partial/sidebar');
-        $this->load->view('matakuliah', $data);
+        $this->load->view('matakuliah/view_matakuliah', $data);
         $this->load->view('partial/footer');
     }
 }
