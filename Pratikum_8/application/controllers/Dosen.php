@@ -122,16 +122,15 @@ class Dosen extends CI_Controller
         $this->form_validation->set_rules('jk', 'jk', 'required');
         $this->form_validation->set_rules('tempat_lahir', 'tempat_lahir', 'required');
         $this->form_validation->set_rules('prodi', 'prodi', 'required');
-        $this->form_validation->set_rules('pendidikan akhir', 'pendidikan akhir', 'required');
+        $this->form_validation->set_rules('pendidikan_akhir', 'pendidikan_akhir', 'required');
         if ($this->form_validation->run() == true) {
             $id = $this->input->post('id');
             $data['nidn'] = $this->input->post('nidn');
             $data['nama'] = $this->input->post('nama');
             $data['jk'] = $this->input->post('jk');
-            $data['tgl_lahir'] = $this->input->post('tgl_lahir');
             $data['tempat_lahir'] = $this->input->post('tempat_lahir');
             $data['prodi'] = $this->input->post('prodi');
-            $data['pendidikan akhir'] = $this->input->post('pendidikan akhir');
+            $data['pendidikan_akhir'] = $this->input->post('pendidikan_akhir');
             $this->dosen_model->edit_dosen($id, $data);
             redirect('dosen');
         } else {
