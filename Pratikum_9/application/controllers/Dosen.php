@@ -106,8 +106,8 @@ class Dosen extends CI_Controller
 
     public function edit_dosen($id)
     {
-        $data['judul'] = 'Form Dosen';
         $data['dosen'] = $this->dosen_model->getDataDosen($id);
+        $data['judul'] = 'Form Dosen';
         $this->load->view('partial/header');
         $this->load->view('partial/sidebar');
         $this->load->view('dosen/edit_dosen', $data);
@@ -116,7 +116,6 @@ class Dosen extends CI_Controller
 
     public function aksi_edit()
     {
-
         $this->form_validation->set_rules('nidn', 'nidn', 'required');
         $this->form_validation->set_rules('nama', 'nama', 'required');
         $this->form_validation->set_rules('jk', 'jk', 'required');
