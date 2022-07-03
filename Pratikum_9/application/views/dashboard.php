@@ -48,6 +48,12 @@
                         <label>Mata Kuliah</label>
                         <p>Pemprograman Web</p>
                     </div>
+                    <div class="col-md-12">
+                        <label>Data Session</label>
+                        <p>Email : <?php echo $this->session->userdata('email'); ?></p>
+                        <p>Username : <?php echo $this->session->userdata('username'); ?></p>
+                        <p>Password: <?php echo $this->session->userdata('password'); ?></p>
+                    </div>
                 </div>
             </div>
             <!-- /.card-body -->
